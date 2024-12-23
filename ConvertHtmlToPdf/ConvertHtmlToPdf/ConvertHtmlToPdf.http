@@ -1,0 +1,6 @@
+@ConvertHtmlToPdf_HostAddress = http://localhost:5094
+
+GET {{ConvertHtmlToPdf_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

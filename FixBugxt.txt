@@ -1,0 +1,12 @@
+Các bước thực hiện: 
+-B1: Vào Nuget tải DrinkToPdf
+-B2: Tạo interface IPdfService và thực hiện triển khai trong PdfService (Sử dụng DI ICoverter và sử dụng function Convert của nó)
+-B3: Tạo PdfController và gọi service IPdfService
+-B4: Đăng kí trong Program.cs:
+	builder.Services.AddSingleton(typeof(IConverter), new SynchronizedConverter(new PdfTools()));
+	builder.Services.AddScoped<IPdfService, PdfService>();
+	
+*Chú ý: Nếu báo lỗi: One or more errors occurred. (Unable to load DLL 'libwkhtmltox' or one of its dependencies: The specified module could not be found. (0x8007007E))
+	-> Tải và cài đặt về máy bản 64-bit về folder sau: C:\Program Files\wkhtmltopdf\bin (https://wkhtmltopdf.org/downloads.html)
+	-> Set biến môi trường: Edit the system environment variables -> Dưới System variables, chọn biến Path -> Edit -> Thêm đường dẫn đến thư mục chứa wkhtmltopdf: C:\Program Files\wkhtmltopdf\bin
+	-> Copy file C:\Program Files\wkhtmltopdf\bin\wkhtmltox.dll vào Project cùng cấp với .csproj vào ĐỔI TÊN file thành libwkhtmltox.dll
