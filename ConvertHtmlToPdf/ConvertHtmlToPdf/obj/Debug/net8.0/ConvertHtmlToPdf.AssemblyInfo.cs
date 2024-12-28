@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ConvertHtmlToPdf")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e425fd4b372a2ae8e299e073cffa2280282e3b4e")]
 [assembly: System.Reflection.AssemblyProductAttribute("ConvertHtmlToPdf")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ConvertHtmlToPdf")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

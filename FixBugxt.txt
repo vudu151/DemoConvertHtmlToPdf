@@ -1,4 +1,4 @@
-Các bước thực hiện: 
+1.Các bước thực hiện: 
 -B1: Vào Nuget tải DrinkToPdf
 -B2: Tạo interface IPdfService và thực hiện triển khai trong PdfService (Sử dụng DI ICoverter và sử dụng function Convert của nó)
 -B3: Tạo PdfController và gọi service IPdfService
@@ -10,3 +10,6 @@ Các bước thực hiện:
 	-> Tải và cài đặt về máy bản 64-bit về folder sau: C:\Program Files\wkhtmltopdf\bin (https://wkhtmltopdf.org/downloads.html)
 	-> Set biến môi trường: Edit the system environment variables -> Dưới System variables, chọn biến Path -> Edit -> Thêm đường dẫn đến thư mục chứa wkhtmltopdf: C:\Program Files\wkhtmltopdf\bin
 	-> Copy file C:\Program Files\wkhtmltopdf\bin\wkhtmltox.dll vào Project cùng cấp với .csproj vào ĐỔI TÊN file thành libwkhtmltox.dll
+	
+2. Khi build lên IIS mặc dù lên swagger nhưng đường dẫn API lỗi 
+-> Cần phải thêm libwkhtmltox.dll vào thư mục publish lúc Publish project lên thì mới ăn

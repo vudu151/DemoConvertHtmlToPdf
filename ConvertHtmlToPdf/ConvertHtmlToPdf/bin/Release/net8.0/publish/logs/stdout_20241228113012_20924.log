@@ -1,0 +1,47 @@
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Production
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: D:\Documents\ONENET\DemoConvertHtmlToPdf\ConvertHtmlToPdf\ConvertHtmlToPdf\bin\Release\net8.0\publish
+warn: Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware[3]
+      Failed to determine the https port for redirect.
+fail: Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer[2]
+      Connection ID "18230571300991008779", Request ID "4000000c-0002-fd00-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+      System.AggregateException: One or more errors occurred. (Unable to load DLL 'libwkhtmltox' or one of its dependencies: The specified module could not be found. (0x8007007E))
+       ---> System.DllNotFoundException: Unable to load DLL 'libwkhtmltox' or one of its dependencies: The specified module could not be found. (0x8007007E)
+         at DinkToPdf.WkHtmlToXBindings.wkhtmltopdf_init(Int32 useGraphics)
+         at DinkToPdf.PdfTools.Load()
+         at DinkToPdf.BasicConverter.Convert(IDocument document)
+         at DinkToPdf.SynchronizedConverter.<>n__0(IDocument document)
+         at DinkToPdf.SynchronizedConverter.<>c__DisplayClass5_0.<Convert>b__0()
+         at System.Threading.Tasks.Task`1.InnerInvoke()
+         at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+      --- End of stack trace from previous location ---
+         at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+         at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+         --- End of inner exception stack trace ---
+         at DinkToPdf.SynchronizedConverter.Invoke[TResult](Func`1 delegate)
+         at DinkToPdf.SynchronizedConverter.Convert(IDocument document)
+         at ConvertHtmlToPdf.Services.PdfService.ConvertHtmlToPdf(String htmlContent) in D:\Documents\ONENET\DemoConvertHtmlToPdf\ConvertHtmlToPdf\ConvertHtmlToPdf\Services\PdfService.cs:line 31
+         at ConvertHtmlToPdf.Controllers.PdfController.ConvertHtmlToPdf(HtmlContentModel htmlContent) in D:\Documents\ONENET\DemoConvertHtmlToPdf\ConvertHtmlToPdf\ConvertHtmlToPdf\Controllers\PdfController.cs:line 21
+         at lambda_method2(Closure, Object, Object[])
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+      --- End of stack trace from previous location ---
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+      --- End of stack trace from previous location ---
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+         at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+         at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+         at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+         at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+         at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContextOfT`1.ProcessRequestAsync()
+info: Microsoft.Hosting.Lifetime[0]
+      Application is shutting down...

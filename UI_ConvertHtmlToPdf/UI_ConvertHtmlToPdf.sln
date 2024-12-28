@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35431.28
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UI_ConvertHtmlToPdf", "UI_ConvertHtmlToPdf\UI_ConvertHtmlToPdf.csproj", "{84417355-7423-4EE2-83AA-A0A20D96E62E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{84417355-7423-4EE2-83AA-A0A20D96E62E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84417355-7423-4EE2-83AA-A0A20D96E62E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84417355-7423-4EE2-83AA-A0A20D96E62E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84417355-7423-4EE2-83AA-A0A20D96E62E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {17739605-CE29-4A7D-8ED0-4786FA35C6CD}
+	EndGlobalSection
+EndGlobal
